@@ -1,0 +1,116 @@
+*{
+    font-family: monospace;
+    box-sizing:border-box;
+}
+
+body{
+    text-align:center;
+}
+
+#smartphone{
+    display:none;
+}
+#menu{
+    border-radius:50%;
+    float:right;
+    height:2em;
+}
+#menu:hover{
+    text-decoration: underline;
+    background-color:rosybrown;
+}
+
+.app{
+    height:100vw;
+}
+.hidden{
+    display:none;
+}
+
+img{
+    height:200px;
+    z-index:-1;
+    width:30vw;
+}
+
+#contador{
+    border:1px solid black;
+    width:200px;
+    height:80px;
+    /*margin-left:30vw;**/
+    font-size:30px;
+    font-weight: bold;
+    padding-top:10px;
+}
+
+#suerte{
+    font-size:3em;
+    /*border:1px solid black;*/
+    border-radius: 45%;
+    text-align:center;
+}
+
+#resultado{
+    font-weight:bolder;
+    font-size:20px;
+}
+
+.face{
+    height:200px;
+    width:20vw;
+}
+
+.tilt{
+    color:white;
+}
+
+@media only screen and (max-width:400px) {
+    
+    .app {
+      display:none;
+    }
+
+    .tilt{
+        display:block;
+        visibility: auto;
+        color:black;
+        font-size:4em;
+    }
+
+    #smartphone{
+        display:block;
+        width:20vw;
+        height:40vw;
+        left:40vw;
+        animation:giro90 2s infinite;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    @keyframes giro90 {
+
+        0%{
+            transform:rotateZ(0deg);
+        }
+
+        100%{
+            transform:rotatez(90deg);
+        }
+    }
+    
+}
+
+@media only screen and (min-width:900px){
+    img{
+        width:200px;
+    }
+
+    .face{
+        width:100px;
+    }
+    body{
+        width:70vw;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
